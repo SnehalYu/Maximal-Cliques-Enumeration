@@ -2,7 +2,7 @@
 
 Maximal Clique Enumeration
 
-## 📌 Project Overview
+## Project Overview
 This project implements and compares three maximal clique enumeration algorithms using C/C++. The algorithms are executed on three large-scale graph datasets, and the results are analyzed based on execution time, clique sizes, and frequency distributions.
 
 ## Clique Detection Algorithm (Chiba & Nishizeki, 1985)
@@ -81,7 +81,7 @@ m = number of edges
 The number of maximal cliques in the worst case is Θ(3ⁿ/³) (Moon-Moser bound).
 
 Compile and run :
-gcc -O3 filename.c -o cliques 
+g++ -O3 filename.c -o cliques 
 ./cliques
 
 ## Comparisions : 
@@ -89,7 +89,7 @@ Chiba & Nishizeki (1985)	: O(d²·n) per clique : Uses arboricity, slower for hi
 Tomita et al. (2006) : O(3ⁿ/³) : Optimal for general graphs but lacks degeneracy optimization.
 ELS Implementation : O(d·n³ᵈ/³) : Best for sparse graphs with low degeneracy.
 
-## 📊 Datasets
+## Datasets
 We use three real-world graph datasets
 
 Email-Enron Network
@@ -128,10 +128,8 @@ Conversion: Convert the data into a suitable format for your algorithms.
 
 Cleaning: Since this dataset is directed, you may need to convert it to an undirected graph depending on your algorithm requirements.
 
-🚀 Execution Instructions
+Execution Instructions
 For .cpp files g++ -O3 filename.cpp -o cliques ./cliques
-
-For .c file gcc -O3 filename.c -o cliques ./cliques
 
 Upload the input dataset .txt file in the same directory as the files and run using ./cliques
 
