@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximal Clique Enumeration Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Maximal Clique Enumeration Algorithms</h1>
+        <p><strong>Comparing Tomita, ELS, and Chiba-Nishizeki Algorithms</strong></p>
+    </header>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p><strong>Finding all maximal cliques</strong> in a graph is a fundamental problem in graph theory with applications in <strong>social networks, bioinformatics, and cybersecurity</strong>. This webpage presents a comparison of three efficient algorithms: <strong>Tomita, ELS, and Chiba-Nishizeki.</strong></p>
+    </section>
+
+    <section>
+        <h2>2. Algorithm Overview</h2>
+
+        <div class="algorithm">
+            <h3>Tomita Algorithm</h3>
+            <p><strong>Time Complexity:</strong> O(3ⁿ/³)</p>
+            <p><strong>Description:</strong> Uses a <strong>depth-first search (DFS)</strong> approach similar to the <strong>Bron-Kerbosch algorithm</strong>. It introduces a <strong>pivoting technique</strong> to reduce unnecessary recursive calls and improve efficiency. This makes it optimal for <strong>dense graphs</strong>.</p>
+            <p><strong>Best for:</strong> General graphs, especially dense networks.</p>
+        </div>
+
+        <div class="algorithm">
+            <h3>ELS Algorithm</h3>
+            <p><strong>Time Complexity:</strong> O(d * n * 3ᵈ/³)</p>
+            <p><strong>Description:</strong> A variation of the <strong>Bron-Kerbosch algorithm</strong> optimized for <strong>sparse graphs</strong>. Instead of treating all vertices equally, it orders them based on <strong>degeneracy</strong>, ensuring fewer recursive calls.</p>
+            <p><strong>Best for:</strong> Sparse graphs, social networks.</p>
+        </div>
+
+        <div class="algorithm">
+            <h3>Chiba-Nishizeki Algorithm</h3>
+            <p><strong>Time Complexity:</strong> O(a(G) * m)</p>
+            <p><strong>Description:</strong> Focuses on <strong>edge-oriented traversal</strong> rather than vertex expansion. The algorithm is particularly useful for <strong>low-arboricity graphs</strong>, such as planar or biological networks.</p>
+            <p><strong>Best for:</strong> Planar graphs, biological networks.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Experimental Observations</h2>
+        <table>
+            <tr>
+                <th>Algorithm</th>
+                <th>Dataset</th>
+                <th>Nodes</th>
+                <th>Edges</th>
+                <th>Maximal Cliques</th>
+                <th>Largest Clique Size</th>
+                <th>Execution Time (ms)</th>
+            </tr>
+            <tr>
+                <td><strong>Tomita</strong></td>
+                <td>Email-Enron</td>
+                <td>36,692</td>
+                <td>367,662</td>
+                <td>226,859</td>
+                <td>20</td>
+                <td>11,892</td>
+            </tr>
+            <tr>
+                <td><strong>Tomita</strong></td>
+                <td>Wiki-Vote</td>
+                <td>7,115</td>
+                <td>103,689</td>
+                <td>459,002</td>
+                <td>17</td>
+                <td>2,567</td>
+            </tr>
+            <tr>
+                <td><strong>Tomita</strong></td>
+                <td>as-Skitter</td>
+                <td>1,696,415</td>
+                <td>11,095,298</td>
+                <td>37,322,355</td>
+                <td>67</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>ELS</strong></td>
+                <td>Email-Enron</td>
+                <td>36,692</td>
+                <td>367,662</td>
+                <td>226,859</td>
+                <td>20</td>
+                <td>9,620</td>
+            </tr>
+            <tr>
+                <td><strong>ELS</strong></td>
+                <td>Wiki-Vote</td>
+                <td>7,115</td>
+                <td>103,689</td>
+                <td>459,002</td>
+                <td>17</td>
+                <td>6,165</td>
+            </tr>
+            <tr>
+                <td><strong>ELS</strong></td>
+                <td>as-Skitter</td>
+                <td>1,696,415</td>
+                <td>11,095,298</td>
+                <td>37,322,355</td>
+                <td>67</td>
+                <td>60,005,292</td>
+            </tr>
+            <tr>
+                <td><strong>Chiba</strong></td>
+                <td>Email-Enron</td>
+                <td>36,692</td>
+                <td>367,662</td>
+                <td>226,859</td>
+                <td>20</td>
+                <td>75,621</td>
+            </tr>
+            <tr>
+                <td><strong>Chiba</strong></td>
+                <td>Wiki-Vote</td>
+                <td>7,115</td>
+                <td>103,689</td>
+                <td>459,002</td>
+                <td>17</td>
+                <td>32,457</td>
+            </tr>
+            <tr>
+                <td><strong>Chiba</strong></td>
+                <td>as-Skitter</td>
+                <td>1,696,415</td>
+                <td>11,095,298</td>
+                <td>37,322,355</td>
+                <td>67</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>4. Best Algorithm Based on Graph Size</h2>
+        <table>
+            <tr>
+                <th>Graph Type</th>
+                <th>Best Algorithm</th>
+                <th>Reason</th>
+            </tr>
+            <tr>
+                <td><strong>Small graphs (n < 10,000)</strong></td>
+                <td><strong>Tomita</strong></td>
+                <td>Has optimal worst-case performance and is the fastest in practice.</td>
+            </tr>
+            <tr>
+                <td><strong>Large, sparse graphs(e.g., social networks)</strong></td>
+                <td><strong>ELS</strong></td>
+                <td>Its performance depends on degeneracy, making it much faster for sparse networks.</td>
+            </tr>
+            <tr>
+                <td><strong>Planar graphs (e.g., road networks, biological networks)</strong></td>
+                <td><strong>Chiba</strong></td>
+                <td>Optimal for low-arboricity graphs.</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Maximal Clique Analysis | Designed for Research & Learning</p>
+    </footer>
+
+</body>
+</html>
