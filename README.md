@@ -135,7 +135,7 @@ Upload the input dataset .txt file in the same directory as the files and run us
 
 We executed our codes on macOS, where Clang is the default compiler, providing support for C++17. Additionally, the Chiba Code was compiled using g++ version 6.3.0.
 
-🤝 Individual Contributions
+Individual Contributions
 Harsh Bavishi ->Chiba Algorithm Implementation 
 Aiman ->ELS Algorithm Implementation 
 Snehal Yutika ->tomitaO6cliques Algorithm Implementation 
