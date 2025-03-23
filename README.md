@@ -1,6 +1,5 @@
 # DAA_Assignment
 
-Maximal Clique Enumeration
 
 ## Project Overview
 This project implements and compares three maximal clique enumeration algorithms using C/C++. The algorithms are executed on three large-scale graph datasets, and the results are analyzed based on execution time, clique sizes, and frequency distributions.
