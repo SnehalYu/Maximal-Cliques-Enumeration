@@ -2,7 +2,9 @@
 
 
 ## Project Overview
-This project implements and compares three maximal clique enumeration algorithms using C/C++. The algorithms are executed on three large-scale graph datasets, and the results are analyzed based on execution time, clique sizes, and frequency distributions.
+This project implements and compares three maximal clique enumeration algorithms using C/C++. The algorithms are executed on three large-scale graph datasets, and the results are analyzed based on execution time, clique sizes, and frequency distributions. 
+### Project Website  
+[Maximal Cliques Enumeration](https://snehalyu.github.io/Maximal-Cliques-Enumeration/)
 
 ## Clique Detection Algorithm (Chiba & Nishizeki, 1985)
 
