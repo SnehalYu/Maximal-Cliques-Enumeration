@@ -96,7 +96,7 @@ AS-Skitter Internet Network
 Wikipedia Vote Network
 Details on preparing the three datasets for maximal clique enumeration:
 
-Email-Enron Network
+## Email-Enron Network
 Description: This dataset represents the email communication network within Enron. It contains about 36,692 nodes (email addresses) and 183,831 edges (email communications). Preparation Steps: Download: Obtain the dataset from https://snap.stanford.edu/data/email-Enron.html.
 
 Format: The dataset is provided in a text file (email-Enron.txt.gz), which needs to be decompressed.
@@ -105,7 +105,7 @@ Conversion: If necessary, convert the data into a suitable format for your algor
 
 Cleaning: Ensure that the graph is undirected since the dataset represents undirected communication.
 
-AS-Skitter Internet Network
+## AS-Skitter Internet Network
 Description: This dataset is an internet topology graph derived from traceroutes. It consists of approximately 1.7 million nodes and 11 million edges. Preparation Steps:
 
 Download: Get the dataset from https://snap.stanford.edu/data/as-Skitter.html.
@@ -116,7 +116,7 @@ Conversion: Convert the data into a suitable format for your algorithms.
 
 Cleaning: This dataset is already in a form suitable for graph analysis, but ensure it is undirected if necessary.
 
-Wikipedia Vote Network
+## Wikipedia Vote Network
 Description: This dataset represents the voting network among Wikipedia users. It contains about 7,115 nodes and 103,689 edges. Preparation Steps:
 
 Download: Obtain the dataset from https://snap.stanford.edu/data/wiki-Vote.html.
@@ -134,10 +134,12 @@ Upload the input dataset .txt file in the same directory as the files and run us
 
 We executed our codes on macOS, where Clang is the default compiler, providing support for C++17. Additionally, the Chiba Code was compiled using g++ version 6.3.0.
 
-Individual Contributions
--Harsh Bavishi ->Chiba Algorithm Implementation 
--Aiman ->ELS Algorithm Implementation 
--Snehal Yutika ->tomitaO6cliques Algorithm Implementation 
--Mustafa Poonawala ->ReadMe 
--Sanchit Arora -> Report & Documentation
+## Individual Contributions
+
+1. **Harsh Bavishi** – Chiba Algorithm, Report
+2. **Aiman** – ELS Algorithm, WebPage
+3. **Snehal Yutika** – Tomita O(6) Cliques Algorithm, Report
+4. **Mustafa Poonawala** – README file
+5. **Sanchit Arora** – Report & Documentation
+
 
