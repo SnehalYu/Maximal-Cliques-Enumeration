@@ -57,6 +57,8 @@ Compile and run :
 g++ -O3 filename.cpp -o cliques 
 ./cliques
 
+
+
 ## Maximal Clique Enumeration (Tomita et al., 2006)
 
 This project implements the Tomita-Tanaka-Takahashi (TTT) algorithm, a depth-first search (DFS) approach for efficiently listing all maximal cliques in a graph. The algorithm is an improvement over the Bron–Kerbosch algorithm, incorporating:
@@ -84,7 +86,8 @@ The number of maximal cliques in the worst case is Θ(3ⁿ/³) (Moon-Moser bound
 Compile and run :
 g++ -O3 filename.c -o cliques 
 ./cliques
-
+## Input Format
+To input a dataset, replace different dataset names with the respective filename in the the main function.
 ## Comparisions : 
 Chiba & Nishizeki (1985)	: O(d²·n) per clique : Uses arboricity, slower for high-degree graphs.
 Tomita et al. (2006) : O(3ⁿ/³) : Optimal for general graphs but lacks degeneracy optimization.
